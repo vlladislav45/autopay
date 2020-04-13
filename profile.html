@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="profile.css">
+
+    <!--    External Libraries-->
+    <script src="scripts/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+    <script src="scripts/mainscript.js"></script>
+</head>
+<body>
+    <header class="main-header">
+        <div class="line"></div>
+        <div class="container">
+            <div class="header-container">
+                <div class="logo-container">
+                    <img src="images/logo1.png" alt="logo-img">
+                    <p class="title-heading">Impact</p>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li class="active"><a href="profile.html"><img src="icons/profile-active-icon.png" alt="profile-icon"></a></li>
+                        <li><a href="settings.html"><img src="icons/settings-unactive-icon.png" alt="settings-icon"></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <div class="profile-detail">
+                <div class="wrapper">
+                    <div class="col-1">
+                        <div class="profile-heading">
+                            <p class="title-heading">Profile <span id="add-profile-btn" class="add-profile-btn">
+                                <img src="icons/add-profile-icon.png" alt="add-profile-icon">
+                            </span></p>
+                        </div>
+                        <input id="profile_name" type="text" placeholder="Profile Name">
+                        <div class="split-col grid-cont">
+                            <div class="col-1">
+                                <input id="first_name" type="text" placeholder="First Name">
+                            </div>
+                            <div class="col-2">
+                                <input id="last_name" type="text" placeholder="Last Name">
+                            </div>
+                        </div>
+                        <input id="email" type="email" placeholder="Email">
+                        <input id="phone_number" type="text" placeholder="Phone Number">
+                        <input id="address1" type="text" placeholder="Address 1">
+                        <input id="address2" type="text" placeholder="Address 2">
+                        <div class="split-col grid-cont">
+                            <div class="col-1">
+                                <select id="country-select" class="control" id="select-1">
+                                    <option id="country" value="country">Country</option>
+                                </select>
+                                <input id="city" type="text" placeholder="City">
+                            </div>
+                            <div class="col-2">
+<!--                                <select id="state-select" class="control">-->
+<!--                                    <option id="state" value="state">State</option>-->
+<!--                                </select>-->
+                                <input id="state" type="text" placeholder="State">
+                                <input id="zipcode" type="text" placeholder="Zipcode">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="profile-heading">
+                            <p class="title-heading">Card Details</p>
+                        </div>
+                        <input id="card_holder" type="text" placeholder="Card Holder">
+                        <input id="card_number" type="text" placeholder="Card Number">
+                        <div class="split-col grid-cont">
+                            <div class="col-1">
+                                <input id="date" type="text" placeholder="MM/YY">
+                            </div>
+                            <div class="col-2">
+                                <input id="cvv" type="text" placeholder="CVV">
+                            </div>
+                        </div>
+                        <div id="select-profile" class="select-profile">
+                            <div class="profile-heading">
+                                <p class="title-heading">Select Profile</p>
+                            </div>
+                        </div>
+                        <div class="btn-holder">
+                            <a id="save" name="save" href="#" class="btn btn-save">Save</a>
+                        </div>
+                        <input type="file" id="files" name="file" />
+                        <span class="readBytesButtons">
+                          <button>Load File</button>
+                        </span>
+                        <div id="byte_range"></div>
+                        <div id="byte_content"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
